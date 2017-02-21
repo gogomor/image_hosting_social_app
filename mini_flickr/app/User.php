@@ -9,11 +9,17 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    public function images(){
+        return $this->hasMany('App\Images');
+    }
     public function comments(){
         return $this->hasMany('App\Comment');
     }
     public function albums(){
         return $this->hasMany('App\Album');
+    }
+    public function favourites(){
+        return $this->hasMany('App\Favourite');
     }
 
 

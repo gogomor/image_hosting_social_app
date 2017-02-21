@@ -3,15 +3,21 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+      <div class="col-sm-6 col-md-4">
+      
+        @foreach($images as $image)
 
-                <div class="panel-body">
-                    You are logged in!
-                </div>
+          <div class="thumbnail">
+            <img alt="img" src="{{ asset('images/'. $image->path) }}">
+            <div class="caption">
+              <h3>Thumbnail label</h3>
+              <p>...</p>
+              <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
             </div>
-        </div>
+          </div>
+
+        @endforeach
+      </div>
     </div>
 </div>
 @endsection

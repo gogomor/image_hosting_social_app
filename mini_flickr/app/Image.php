@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Image extends Model
 {
-    
+    public function user(){
+    	return $this->belongsTo('App\User');
+    }
     public function comments(){
     	return $this->hasMany('App\Comment');
     }
@@ -16,4 +18,8 @@ class Image extends Model
     public function tags(){
     	return $this->belongsToMany('App\Tag', 'image_tag', 'image_id', 'tag_id');
     }
+    public function favourites(){
+    	return $this->hasMany('App\Favourite');
+    }
+
 }
