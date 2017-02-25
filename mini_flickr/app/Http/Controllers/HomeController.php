@@ -24,7 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $images = Image::all();
+
+        $images = Image::with('user')->paginate(9);
+        
         
         return view('home',compact('images'));
     }
