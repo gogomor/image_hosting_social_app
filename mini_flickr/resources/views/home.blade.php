@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     
       @foreach($images as $key => $image)
         {{-- Na samom pocetku, kao i pred svaku cetvrtu sliku dodaj nov row  --}}
@@ -11,13 +11,18 @@
         <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
             <h5>{{ $image->user->name }}</h5>
-              <img alt="img" src="{{ asset('images/'. $image->path) }}">
+            <a href="{{'/images/' . $image->id}}"><img alt="img" src="{{ asset('images/'. $image->path) }}"></a>
               <div class="caption">
                 @if($image->name)
-                <h3>{{ $image->name }}</h3>
+                <h3>{{ $image->name }}</h3>               
                 @endif
-                <p>...</p>
-                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                <img class="ico star" src="/images/other/star.png">
+                <img class="ico comment" src="/images/other/comment.png">
+                <div class="image-info">
+                  <span>99+ faves</span>
+                  <span>99+ views</span>
+                  <span>1000 comments</span>
+                </div>               
               </div>
             </div>      
         </div>

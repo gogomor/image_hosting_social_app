@@ -77,9 +77,17 @@
         </nav>
 
         @yield('content')
-    </div>
 
+
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">Goran Đukić.</span>
+      </div>
+    </footer> 
+   
     <!-- Scripts -->
     <script src="/js/app.js"></script>
 </body>
+    
 </html>
