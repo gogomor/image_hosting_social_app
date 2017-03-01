@@ -37,10 +37,28 @@
 	width: 50%;
 	margin-top: 30px;
 }
+.comments span{
+	font-weight: bold;
+	
+}
 
 .panel-info {
 	width: 70%;
 	margin: 0 auto;
 	margin-bottom: 10px;
 	
+}
+.form-comment {
+	width:30%;
+	margin:0 auto;
+	margin-top: 20px;
+	
+}
+.form-comment textarea{
+	width: 100%;
+	margin-bottom: 10px;
+
+}
+.form-comment button {
+	margin:0 auto;
 }

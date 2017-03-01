@@ -11,7 +11,7 @@
         <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
             <h5>{{ $image->user->name }}</h5>
-            <a href="{{'/images/' . $image->id}}"><img alt="img" src="{{ asset('images/'. $image->path) }}"></a>
+            <a href="{{'/image/' . $image->id}}"><img alt="img" src="{{ asset('images/'. $image->path) }}"></a>
               <div class="caption">
                 @if($image->name)
                 <h3>{{ $image->name }}</h3>               

@@ -18,5 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-Route::get('/images/{image}', 'ImagesController@show');
+Route::get('/image/{image}', 'ImagesController@show');
+Route::post('/image/{image}', 'ImagesController@store_comment');
 
